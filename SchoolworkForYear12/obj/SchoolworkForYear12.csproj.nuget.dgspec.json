@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj": {}
+    "F:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj": {}
   },
   "projects": {
-    "D:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj": {
+    "F:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj",
+        "projectUniqueName": "F:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj",
         "projectName": "SchoolworkForYear12",
-        "projectPath": "D:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj",
-        "packagesPath": "C:\\Users\\stavg\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\obj\\",
+        "projectPath": "F:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\SchoolworkForYear12.csproj",
+        "packagesPath": "C:\\Users\\Class\\.nuget\\packages\\",
+        "outputPath": "F:\\Coding\\ComputerScience\\SmallProjects\\SchoolworkForYear12\\SchoolworkForYear12\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\stavg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Class\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\stavg\\.dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

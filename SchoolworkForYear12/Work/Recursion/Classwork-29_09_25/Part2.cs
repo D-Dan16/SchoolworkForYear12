@@ -1,33 +1,33 @@
 ﻿namespace SchoolworkForYear12.Work.Recursion.Classwork_29_09_25;
 
-public static class ArrayQuestions
+public static class Part2
 {
     public static void Main()
     {
         Start();
     }
 
-    private static void Start()
+    static void Start()
     {
-        CalcSumOfSequence(5);
+        Console.WriteLine(CalcSumOfSequence(5));
 
-        CalcSumOfSequenceWithRadical(5);
+        Console.WriteLine(CalcSumOfSequenceWithRadical(5));
 
-        CalcSquareOfFibonacci(5);
+        Console.WriteLine(CalcSquareOfFibonacci(5));
 
         int[] arr = [4,6,7,8,9,10];
 
-        SumElementsUntil(4, arr);
+        Console.WriteLine(SumElementsUntil(4, arr));
 
-        SumElementsFrom(4, arr);
+        Console.WriteLine(SumElementsFrom(4, arr));
 
-        CountPositiveElementsUntilIndex(3, arr);
+        Console.WriteLine(CountPositiveElementsUntilIndex(3, arr));
 
-        IsArraySorted(arr);
+        Console.WriteLine(IsArraySorted(arr));
 
-        FindIndexOfElement(arr, 8);
+        Console.WriteLine(FindIndexOfElement(arr, 8));
 
-        HasPrimeInArray(arr);
+        Console.WriteLine(HasPrimeInArray(arr));
 
         int[,] arr2D = new[,]
         {
@@ -36,46 +36,46 @@ public static class ArrayQuestions
             {7, 8, 9}
         };
 
-        IsMatBiggerThan(arr2D, 3);
+        Console.WriteLine(IsMatBiggerThan(arr2D, 3));
 
-        CountNumIn2DArray(arr2D, 4, arr2D.GetLength(0) - 1);
+        Console.WriteLine(CountNumIn2DArray(4, arr2D, arr2D.GetLength(0) - 1));
 
 
 
     }
 
     /** ex30 */
-    private static int CountNumIn2DArray(int[,] arr2D, int lookedForNum, int row)
+    static int CountNumIn2DArray(int lookedForNum, int[,] arr2D, int row)
     {
         if (row < 0)
             return 0;
 
         return
-            IsThereNumInRow(lookedForNum, row) ? 1 : 0  +
-            CountNumIn2DArray(arr2D, lookedForNum, row - 1 );
+            IsThereNumInRow(lookedForNum, row, arr2D) ? 1 : 0  +
+            CountNumIn2DArray(lookedForNum, arr2D, row - 1);
+    }
 
-        bool IsThereNumInRow(int checkedNum, int selectedRow, int elementNum = 0)
-        {
-            if (elementNum > arr2D.GetLength(1))
-                return false;
+    private static bool IsThereNumInRow(int checkedNum, int selectedRow, int[,] arr2D, int elementNum = 0)
+    {
+        if (elementNum > arr2D.GetLength(1) - 1)
+            return false;
 
-            if (arr2D[selectedRow, elementNum] == checkedNum)
-                return true;
+        if (arr2D[selectedRow, elementNum] == checkedNum)
+            return true;
 
-            return IsThereNumInRow(checkedNum, selectedRow, elementNum + 1);
-        }
+        return IsThereNumInRow(checkedNum, selectedRow, arr2D, elementNum + 1);
     }
 
 
     /**
      * ex28
      */
-    private static bool IsMatBiggerThan(int[,] arr2D, int comparedVal)
+    static bool IsMatBiggerThan(int[,] arr2D, int comparedVal)
     {
         return IsMatBiggerThan(arr2D, comparedVal, 0);
     }
 
-    private static bool IsMatBiggerThan(int[,] arr2D, int lookedForNum, int row)
+    static bool IsMatBiggerThan(int[,] arr2D, int lookedForNum, int row)
     {
         if (row > arr2D.GetLength(0))
             return true;
@@ -100,12 +100,12 @@ public static class ArrayQuestions
     /**
      * ex25
      */
-    private static bool HasPrimeInArray(int[] arr)
+    static bool HasPrimeInArray(int[] arr)
     {
         return HasPrimeInArray(arr, 0);
     }
 
-    private static bool HasPrimeInArray(int[] arr, int index)
+    static bool HasPrimeInArray(int[] arr, int index)
     {
         if (index > arr.Length - 1)
             return false;
@@ -116,7 +116,7 @@ public static class ArrayQuestions
         return HasPrimeInArray(arr, index+1);
     }
 
-    private static bool IsPrime(int integer,int divisor = 2)
+    static bool IsPrime(int integer,int divisor = 2)
     {
         if (divisor >= Math.Sqrt(integer))
             return true;
@@ -130,12 +130,12 @@ public static class ArrayQuestions
     /**
      * ex22
      */
-    private static int FindIndexOfElement(int[] arr, int element)
+    static int FindIndexOfElement(int[] arr, int element)
     {
         return FindIndexOfElement(arr, element,0);
     }
 
-    private static int FindIndexOfElement(int[] arr, int element, int index)
+    static int FindIndexOfElement(int[] arr, int element, int index)
     {
         if (index > arr.Length - 1)
             return -1;
@@ -150,7 +150,7 @@ public static class ArrayQuestions
     /**
      * ex21
      */
-    private static bool IsArraySorted(int[] arr, int index = 0)
+    static bool IsArraySorted(int[] arr, int index = 1)
     {
         if (index >= arr.Length - 1)
             return true;
@@ -165,7 +165,7 @@ public static class ArrayQuestions
     /**
     * ex20
     */
-    private static int CountPositiveElementsUntilIndex(int index, int[] arr)
+    static int CountPositiveElementsUntilIndex(int index, int[] arr)
     {
         if (index < 0 || index >= arr.Length) return 0;
         return (arr[index] > 0 ? 1 : 0) + CountPositiveElementsUntilIndex(index - 1, arr);
@@ -175,7 +175,7 @@ public static class ArrayQuestions
     /**
      * ex19
      */
-    private static int SumElementsFrom(int index, int[] arr)
+    static int SumElementsFrom(int index, int[] arr)
     {
         if (index < 0 || index >= arr.Length) return 0;
         return arr[index] + SumElementsFrom(index + 1, arr);
@@ -184,7 +184,7 @@ public static class ArrayQuestions
     /**
      * ex18
      */
-    private static int SumElementsUntil(int index, int[] arr)
+    static int SumElementsUntil(int index, int[] arr)
     {
         if (index < 0 || index >= arr.Length) return 0;
         return arr[index] + SumElementsUntil(index - 1, arr);
@@ -194,7 +194,7 @@ public static class ArrayQuestions
     /**
      * ex17
      */
-    private static int CalcSquareOfFibonacci(int index)
+    static int CalcSquareOfFibonacci(int index)
     {
         switch (index)
         {
@@ -207,7 +207,7 @@ public static class ArrayQuestions
         return CalcSquareOfFibonacci(index, 3, 1, 1, 0);
     }
 
-    private static int CalcSquareOfFibonacci(
+    static int CalcSquareOfFibonacci(
         int goalIndex,
         int curIndex,
         int curValue,
@@ -227,7 +227,7 @@ public static class ArrayQuestions
     /**
      * ex15
      */
-    private static int CalcSumOfSequenceWithRadical(int num)
+    static double CalcSumOfSequenceWithRadical(int num)
     {
         if (num == 1)
             return 1;
@@ -243,7 +243,7 @@ public static class ArrayQuestions
     /**
      * ex14
      */
-    private static int CalcSumOfSequence(int num)
+    static int CalcSumOfSequence(int num)
     {
         if (num == 1)
             return 2;

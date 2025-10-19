@@ -1,6 +1,6 @@
 ﻿namespace SchoolworkForYear12.Work.Recursion.Classwork_29_09_25;
 
-public static class Program
+public static class Part1
 {
     public static void Start()
     {
