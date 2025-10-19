@@ -2,10 +2,10 @@
 
 public static class Part2
 {
-    public static void Main()
-    {
-        Start();
-    }
+    // public static void Main()
+    // {
+    //     Start();
+    // }
 
     static void Start()
     {
