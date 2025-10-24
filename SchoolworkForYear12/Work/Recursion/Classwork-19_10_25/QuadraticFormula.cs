@@ -2,7 +2,7 @@
 
 public static class QuadraticFormula
 {
-    static void Main()
+    static void Main_()
     {
         Start();
     }
