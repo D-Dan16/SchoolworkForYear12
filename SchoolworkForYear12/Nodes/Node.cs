@@ -9,7 +9,7 @@ public class Node<T>
         this.next = null;
     }
 
-    public Node(T value, Node<T> next)
+    public Node(T value, Node<T>? next)
     {
         this.value = value;
         this.next = next;
@@ -42,6 +42,14 @@ public class Node<T>
 
     public override string ToString()
     {
-       return value+"";
+        var str = "";
+        var curNode = this;
+        while (curNode != null)
+        {
+            str += $"{curNode.value} -> ";
+            curNode = curNode.GetNext();
+        }
+
+       return str;
     }
 }

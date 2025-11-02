@@ -3,10 +3,10 @@
 // ReSharper disable once InconsistentNaming
 public static class Classwork_25_10_25
 {
-    public static void Main()
-    {
-        Start();
-    }
+    // public static void Main()
+    // {
+    //     Start();
+    // }
 
     private static void Start()
     {
