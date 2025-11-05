@@ -1,0 +1,29 @@
+﻿# .NET build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rtifacts/
+[Tt]est[Rr]esult*/
+[Ll]og/
+logs/
+
+# Rider/VS
+.vs/
+.idea/
+*.user
+*.suo
+
+# Common build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+*.log
+*.sourcelink.json
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/

@@ -2,7 +2,7 @@
 
 public static class ProgramStart
 {
-    public static void Main()
+    public static void Main_()
     {
         int[] elements = [1,2,3,4,5];
         var head = CreateLinkedList(elements);
