@@ -44,11 +44,12 @@ public class Queue<T>
         Node<T> current = first;
         string st = "Queue[";
         while (current != null) {
-            st += current.ToString();                    
+            st += current.GetValue()?.ToString();
             current = current.GetNext();
             if (current != null)
                 st += ",";
         }
-        return st + "]";    
+
+        return $"{st}] ->  {this.GetHashCode()}";
     }        
 }
