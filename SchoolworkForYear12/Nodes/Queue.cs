@@ -51,5 +51,15 @@ public class Queue<T>
         }
 
         return $"{st}] ->  {this.GetHashCode()}";
-    }        
+    }
+
+    public Queue<T> AddCollectionToQueue(List<T> collection)
+    {
+        foreach (var expression in collection)
+        {
+            this.Insert(expression);
+        }
+
+        return this;
+    }
 }

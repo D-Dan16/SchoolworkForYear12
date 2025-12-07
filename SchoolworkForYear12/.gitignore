@@ -8,12 +8,6 @@
 [Ll]og/
 logs/
 
-# Rider/VS
-.vs/
-.idea/
-*.user
-*.suo
-
 # Common build artifacts
 *.dll
 *.exe
@@ -22,6 +16,14 @@ logs/
 *.tmp
 *.log
 *.sourcelink.json
+
+# Rider / IntelliJ / VS
+.vs/
+.idea/
+*.user
+*.suo
+*.csproj.user
+*.rsuser
 
 # NuGet
 *.nupkg
