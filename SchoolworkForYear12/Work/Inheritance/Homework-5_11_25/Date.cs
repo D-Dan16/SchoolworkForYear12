@@ -36,19 +36,19 @@ public class Date
     }
 
 
-    public int SetDay(int num)
+    public void SetDay(int num)
     {
-        return _day = num;
+        _day = num;
     }
 
-    public int SetMonth(int num)
+    public void SetMonth(int num)
     {
-        return _month = num;
+        _month = num;
     }
 
-    public int SetYear(int num)
+    public void SetYear(int num)
     {
-        return _year = num;
+        _year = num;
     }
 
     public int CompareTo(Date other)
@@ -65,5 +65,15 @@ public class Date
     public override string ToString()
     {
         return $"{_day}.{_month}.{_year}";
+    }
+
+
+    public static Date GetCurDate()
+    {
+        return new Date(
+            5,
+            1,
+            2026
+        );
     }
 }
