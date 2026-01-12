@@ -1,4 +1,4 @@
-﻿namespace SchoolworkForYear12.Work.Inheritance.TheZoo;
+﻿namespace SchoolworkForYear12.Work.OOP.TheZoo.ZooAnimals;
 
 public class Bird : Animal
 {
@@ -6,7 +6,7 @@ public class Bird : Animal
     protected double lengthOfWings;
 
 
-    public Bird(string name, int age, string apexPredator, string numOfCaloriesForADish, double maxHeightOfFlight, double lengthOfWings) : base(name, age, apexPredator, numOfCaloriesForADish)
+    public Bird(string name, int age, bool isApexPredator, int numOfCaloriesForADish, double maxHeightOfFlight, double lengthOfWings) : base(name, age, isApexPredator, numOfCaloriesForADish)
     {
         this.maxHeightOfFlight = maxHeightOfFlight;
         this.lengthOfWings = lengthOfWings;
@@ -35,4 +35,19 @@ public class Bird : Animal
                 """;
     }
 
+
+    public override int Eat()
+    {
+        return numOfCaloriesForADish*2;
+    }
+
+    public void Sing()
+    {
+        Console.WriteLine("The bird goes chirp chirp chirp");
+    }
+
+    public void Dance()
+    {
+        Console.WriteLine("The bird dances!");
+    }
 }

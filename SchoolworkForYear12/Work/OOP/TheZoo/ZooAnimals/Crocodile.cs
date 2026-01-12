@@ -1,11 +1,13 @@
-﻿namespace SchoolworkForYear12.Work.Inheritance.TheZoo;
+﻿using SchoolworkForYear12.Work.Inheritance.TheZoo;
+
+namespace SchoolworkForYear12.Work.OOP.TheZoo.ZooAnimals;
 
 public class Crocodile : Reptile
 {
     protected bool hasGoneThroughTeethSurgery;
 
 
-    public Crocodile(string name, int age, string apexPredator, string numOfCaloriesForADish, double lengthOfTail, bool hasGoneThroughTeethSurgery) : base(name, age, apexPredator, numOfCaloriesForADish, lengthOfTail)
+    public Crocodile(string name, int age, bool isApexPredator, int numOfCaloriesForADish, double lengthOfTail, bool hasGoneThroughTeethSurgery) : base(name, age, isApexPredator, numOfCaloriesForADish, lengthOfTail)
     {
         this.hasGoneThroughTeethSurgery = hasGoneThroughTeethSurgery;
     }
@@ -24,6 +26,11 @@ public class Crocodile : Reptile
                 {hasGoneThroughTeethSurgery}
                 ------------------------------------------
                 """;
+    }
+
+    public override int Eat()
+    {
+        return numOfCaloriesForADish*4;
     }
 
 }

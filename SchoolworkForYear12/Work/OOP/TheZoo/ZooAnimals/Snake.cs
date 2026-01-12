@@ -5,7 +5,7 @@ public class Snake : Reptile
     protected bool isVenomous;
 
 
-    public Snake(string name, int age, string apexPredator, string numOfCaloriesForADish, double lengthOfTail, bool isVenomous) : base(name, age, apexPredator, numOfCaloriesForADish, lengthOfTail)
+    public Snake(string name, int age, bool isApexPredator, int numOfCaloriesForADish, double lengthOfTail, bool isVenomous) : base(name, age, isApexPredator, numOfCaloriesForADish, lengthOfTail)
     {
         this.isVenomous = isVenomous;
     }
@@ -24,6 +24,11 @@ public class Snake : Reptile
                 {isVenomous}
                 ------------------------------------------
                 """;
+    }
+
+    public void Dance()
+    {
+        Console.WriteLine("The snake dances!");
     }
 
 }

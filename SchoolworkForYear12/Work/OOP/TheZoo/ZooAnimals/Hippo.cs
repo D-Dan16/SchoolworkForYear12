@@ -1,11 +1,13 @@
-﻿namespace SchoolworkForYear12.Work.Inheritance.TheZoo;
+﻿using SchoolworkForYear12.Work.Inheritance.TheZoo;
 
-public class Hipo : Mammal
+namespace SchoolworkForYear12.Work.OOP.TheZoo.ZooAnimals;
+
+public class Hippo : Mammal
 {
     protected double fatPercentage;
 
 
-    public Hipo(string name, int age, string apexPredator, string numOfCaloriesForADish, int milkInKalories, int numOfMonthesOfPregnancy, double fatPercentage) : base(name, age, apexPredator, numOfCaloriesForADish, milkInKalories, numOfMonthesOfPregnancy)
+    public Hippo(string name, int age, bool isApexPredator, int numOfCaloriesForADish, int milkInCalories, int numOfMonthsOfPregnancy, double fatPercentage) : base(name, age, isApexPredator, numOfCaloriesForADish, milkInCalories, numOfMonthsOfPregnancy)
     {
         this.fatPercentage = fatPercentage;
     }

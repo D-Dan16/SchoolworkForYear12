@@ -1,17 +1,17 @@
-﻿namespace SchoolworkForYear12.Work.Inheritance.TheZoo;
+﻿namespace SchoolworkForYear12.Work.OOP.TheZoo.ZooAnimals;
 
 public class Animal
 {
     protected string name;
     protected int age;
-    protected string apexPredator;
-    protected string numOfCaloriesForADish;
+    protected bool isApexPredator;
+    protected int numOfCaloriesForADish;
 
-    public Animal(string name, int age, string apexPredator, string numOfCaloriesForADish)
+    public Animal(string name, int age, bool isApexPredator, int numOfCaloriesForADish)
     {
         this.name = name;
         this.age = age;
-        this.apexPredator = apexPredator;
+        this.isApexPredator = isApexPredator;
         this.numOfCaloriesForADish = numOfCaloriesForADish;
     }
 
@@ -27,24 +27,29 @@ public class Animal
         set => age = value;
     }
 
-    public string ApexPredator
+    public bool IsApexPredator
     {
-        get => apexPredator;
-        set => apexPredator = value ?? throw new ArgumentNullException(nameof(value));
+        get => isApexPredator;
+        set => isApexPredator = value;
     }
 
-    public string NumOfCaloriesForADish
+    public int NumOfCaloriesForADish
     {
         get => numOfCaloriesForADish;
-        set => numOfCaloriesForADish = value ?? throw new ArgumentNullException(nameof(value));
+        set => numOfCaloriesForADish = value;
     }
 
     public override string ToString()
     {
         return $"""
                 ---------Animal Properties:-----------
-                {this.Name},{this.Age},{this.ApexPredator},{this.NumOfCaloriesForADish}
+                {this.Name},{this.Age},{this.IsApexPredator},{this.NumOfCaloriesForADish}
                 --------------------------------------
                 """;
+    }
+
+    public virtual int Eat()
+    {
+        return numOfCaloriesForADish*3;
     }
 }
