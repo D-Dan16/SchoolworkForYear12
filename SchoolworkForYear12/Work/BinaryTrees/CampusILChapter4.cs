@@ -1,5 +1,4 @@
 ﻿
-using Unit4.CollectionsLib;
 
 public static class CampusILChapter4
 {
