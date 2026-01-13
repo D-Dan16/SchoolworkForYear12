@@ -14,8 +14,8 @@ public class Cow : Mammal
 
     public int NumOfCalves
     {
-        get => NumOfCalves;
-        set => NumOfCalves = value;
+        get => numOfCalves;
+        set => numOfCalves = value;
     }
     
     public override string ToString()
