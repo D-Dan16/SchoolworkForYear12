@@ -32,4 +32,16 @@ public static class ServicesNode
 
         return head;
     }
+
+    public static Node<T>? CreateLinkedList<T>(T[] elements)
+    {
+        Node<T>? curNode = null, prevNode = null;
+        for (var i = elements.Length - 1; i >= 0; i--)
+        {
+            curNode = new Node<T>(elements[i],prevNode);
+            prevNode = curNode;
+        }
+
+        return curNode;
+    }
 }
