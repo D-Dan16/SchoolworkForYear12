@@ -2,15 +2,18 @@
 
 public static class ApproachA
 {
-    public static bool IsPalindrome(Node<int>? lst, int n)
+    public static bool IsPalindrome(Node<int>? lst, int lengthOfSub)
     {
         if (lst == null)
             return true;
 
+        int sizeLst = ServicesNode.count(lst);
+        int lastLegalIndex = sizeLst - lengthOfSub;
+
         int index = 0;
-        for (Node<int>? curNode = lst; curNode != null; curNode = curNode.GetNext())
+        for (Node<int>? curNode = lst; curNode != null && index <= lastLegalIndex; curNode = curNode.GetNext())
         {
-            if (IsElementPalindrome(lst,n,index))
+            if (IsElementPalindrome(lst,lengthOfSub,index))
                 return true;
 
             index++;
@@ -19,8 +22,14 @@ public static class ApproachA
         return false;
     }
 
-    private static bool IsElementPalindrome(Node<int> lst, int n, int index)
+    private static bool IsElementPalindrome(Node<int> lst, int lengthOfSub, int pivotIndex)
     {
-        if (index < n ||  )
+        for (int leftPtr = pivotIndex, rightPtr = pivotIndex + lengthOfSub-1; leftPtr <= rightPtr; leftPtr++, rightPtr--)
+        {
+            if (ServicesNode.getElementAtIndex(lst,leftPtr) != ServicesNode.getElementAtIndex(lst,rightPtr))
+                return false;
+        }
+
+        return true;
     }
 }

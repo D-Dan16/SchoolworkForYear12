@@ -8,11 +8,15 @@ public class StartHw
         var listBTrue = ServicesNode.CreateLinkedList([-1, -2, -3, -4, -5, -6, 8, 7, 6, 6, 7, 8]);
 
         var listAFalse = ServicesNode.CreateLinkedList([-1, -2, -3, -4, -5, -6, 9, 8, 8, 6, 7, 8, 9, -7, -8]);
-        var listBFalse = ServicesNode.CreateLinkedList([-1, -2, -3, -4, -5, -6, 8, 7, 6, 6, 7, 8]);
+        var listBFalse = ServicesNode.CreateLinkedList([-1, -2, -3, -4, -5, -6, 8, 7, 6, 8, 7, 8]);
 
         //Iterative
-        ApproachA.IsPalindrome(listATrue,7);
+        Console.WriteLine(ApproachA.IsPalindrome(listATrue,7));
+        Console.WriteLine(ApproachA.IsPalindrome(listBTrue,4));
+
+        Console.WriteLine(ApproachA.IsPalindrome(listAFalse,7));
+        Console.WriteLine(ApproachA.IsPalindrome(listBFalse,6));
         //Recursive
-        ApproachB.IsPalindrome(listATrue,7);
+        // ApproachB.IsPalindrome(listATrue,7);
     }
 }

@@ -44,4 +44,27 @@ public static class ServicesNode
 
         return curNode;
     }
+
+    public static int count(Node<int> lst)
+    {
+        int counter = 0;
+        for (Node<int> cur = lst; cur != null; cur = cur.GetNext())
+            counter++;
+
+        return counter;
+    }
+
+    public static int getElementAtIndex(Node<int> lst, int index)
+    {
+        int count = 0;
+        var curNode = lst;
+
+        while (count < index)
+        {
+            curNode = curNode.GetNext();
+            count++;
+        }
+
+        return curNode.GetValue();
+    }
 }
