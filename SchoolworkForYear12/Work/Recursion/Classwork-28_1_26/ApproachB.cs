@@ -7,6 +7,7 @@ public static class ApproachB
         if (lst == null)
             return true;
 
+        return true;
 
-        return true; }
+    }
 }
